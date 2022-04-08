@@ -1,0 +1,61 @@
+﻿<Window x:Class="ICT365_A2_Andreas_Lau.CollaboratorRegistration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICT365_A2_Andreas_Lau"
+        mc:Ignorable="d"
+        Title="CollaboratorRegistration" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="img/techybackground.jpg"/>
+    </Window.Background>
+    <Grid Margin="0,0,0,181">
+        <TextBlock HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="309" Height="26" FontFamily="Segoe UI Black" Background="Gray" Foreground="#00ff00"><Run Text="Register"/><Run Text=" to be a Collaborator "/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="10,42,0,0" TextWrapping="Wrap" Foreground="#00ff00" Text="First name:" VerticalAlignment="Top" Width="70" FontSize="14" />
+        <TextBox x:Name="firstnamebox" HorizontalAlignment="Left" Height="24" Margin="84,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" TextChanged="TextBox_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="219,44,0,0" TextWrapping="Wrap" Foreground="#00ff00" Text="Last name:" VerticalAlignment="Top" Width="70" FontSize="14"/>
+        <TextBox x:Name="lastnamebox" HorizontalAlignment="Left" Height="24" Margin="300,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,134,0,0" TextWrapping="Wrap" Foreground="#00ff00" Text="Area:" VerticalAlignment="Top" Width="64"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,90,0,0" TextWrapping="Wrap" Foreground="#00ff00" Text="Contact:" VerticalAlignment="Top" Width="64"/>
+        <TextBox x:Name="mobilebox" HorizontalAlignment="Left" Height="25" Margin="84,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="291"/>
+        <TextBlock HorizontalAlignment="Left" Margin="257,132,0,0" TextWrapping="Wrap" Foreground="#00ff00" Text="Twitter:" VerticalAlignment="Top" Width="64"/>
+        <CheckBox x:Name="twitterbox" Content="" HorizontalAlignment="Left" Margin="311,134,0,0" VerticalAlignment="Top" Checked="twitterbox_Checked"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="357,132,0,0" TextWrapping="Wrap" Foreground="#00ff00" Text="Facebook:" VerticalAlignment="Top" Width="64"/>
+        <CheckBox x:Name="facebookbox" Content="" HorizontalAlignment="Left" Margin="411,134,0,0" VerticalAlignment="Top" Checked="facebookbox_Checked"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="20,189,0,0" TextWrapping="Wrap" Foreground="#00ff00" Text="Availability:" VerticalAlignment="Top" Width="85"/>
+        <RadioButton x:Name="radio6am" Foreground="#00ff00" Content="6am - 12pm" HorizontalAlignment="Left" Margin="128,193,0,0" VerticalAlignment="Top" Checked="radio6am_Checked_1"/>
+        <RadioButton x:Name="radio24hour" Foreground="#00ff00" Content="24hours" HorizontalAlignment="Left" Margin="128,229,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radio6pm" Foreground="#00ff00" Content="12pm - 6pm" HorizontalAlignment="Left" Margin="243,193,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioafter6pm" Foreground="#00ff00" Content="6pm - 12am" HorizontalAlignment="Left" Margin="350,193,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioafter12am" Foreground="#00ff00" Content="12am - 6am" HorizontalAlignment="Left" Margin="465,193,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="weekendcheck" Foreground="#00ff00" Content="Weekends" HorizontalAlignment="Left" Margin="243,232,0,0" VerticalAlignment="Top" Checked="weekendcheck_Checked"/>
+
+
+
+
+        <Grid HorizontalAlignment="Left" Height="165" Margin="2,259,0,-153" VerticalAlignment="Top" Width="400">
+            <TextBlock Margin="10,0,280,145" TextWrapping="Wrap"><Run Foreground="#00ff00" Text="Area-"/><Run Foreground="#00ff00" Text="Help Radius"/><Run Text=":"/></TextBlock>
+            <RadioButton x:Name="radio10km" Foreground="#00ff00" Content="10Km" Margin="125,0,210,144" Checked="CheckBox_Checked" Height="16" VerticalAlignment="Bottom"/>
+            <RadioButton x:Name="radio25km" Foreground="#00ff00" Content="25Km" Margin="240,5,100,143"/>
+            <RadioButton x:Name="radio50km" Foreground="#00ff00" Content="50Km" Margin="125,37,210,109" RenderTransformOrigin="0.5,0.5"/>
+            <RadioButton x:Name="radio100km" Foreground="#00ff00" Content="100Km" Margin="240,40,95,109"/>
+            <Button Content="Submit" Margin="75,85,245,50" FontWeight="Bold" Click="submitbtn" Foreground="#00ff00" Background="Gray"/>
+            <Button x:Name="clearButton" Content="Clear" Margin="225,85,95,50" FontWeight="Bold" Click="clearbtn" Foreground="#00ff00" Background="Gray"/>
+        </Grid>
+        <ComboBox x:Name="arealist" HorizontalAlignment="Left" Margin="84,128,0,0" VerticalAlignment="Top" Width="120" Text="Pick an area" IsEditable="True" SelectionChanged="ComboBox_SelectionChanged"  >
+            <ComboBoxItem Foreground="#00ff00" Content="Chua Chu Kang"/>
+            <ComboBoxItem Foreground="#00ff00" Content="Clementi"/>
+            <ComboBoxItem Foreground="#00ff00" Content="Tiong Bahru"/>
+            <ComboBoxItem Foreground="#00ff00" Content="Orchard"/>
+            <ComboBoxItem Foreground="#00ff00" Content="Serangoon"/>
+            <ComboBoxItem Foreground="#00ff00" Content="Kovan"/>
+            <ComboBoxItem Foreground="#00ff00" Content="Hougang"/>
+            <ComboBoxItem Foreground="#00ff00" Content="Ponggol"/>
+            <ComboBoxItem Foreground="#00ff00" Content="Marine Parade"/>
+            <ComboBoxItem Foreground="#00ff00" Content="Dover"/>
+
+        </ComboBox>
+    </Grid>
+</Window>

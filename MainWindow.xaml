@@ -1,0 +1,68 @@
+﻿<Window x:Class="ICT365_A2_Andreas_Lau.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICT365_A2_Andreas_Lau"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="500">
+
+    <Border Padding="10" BorderThickness="0" Margin="0,0,4.4,-2.6">
+        <Border.Background>
+            <ImageBrush x:Name="imageBrush" ImageSource="img\singapore.png" Stretch="UniformToFill"/>
+        </Border.Background>
+        <StackPanel Margin="-9.6,-9.6,-0.8,-10.6" RenderTransformOrigin="0.556,0.52" HorizontalAlignment="Left" Width="504">
+            <StackPanel.Background>
+                <ImageBrush/>
+            </StackPanel.Background>
+            <TextBlock Margin="50,10,35,30" TextAlignment="Center" Height="36" TextWrapping="Wrap" FontWeight="Bold" FontFamily="Cooper Black" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center" Width="419" Foreground="#00FF00" Text="Dementia and Cognitive System" FontSize="20">
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="img/techybackground.jpg"/>
+                </TextBlock.Background>
+            </TextBlock>
+            <Button x:Name="signupbtn" Content="Register" Click="Button_Click" Foreground="#00FF00" Height="40" Margin="52,0,0,5" HorizontalAlignment="Left" Width="140" RenderTransformOrigin="0.5,0.5" BorderBrush="#FF080505" FontFamily="Copperplate Gothic Light" FontSize="15">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="DarkOliveGreen" Offset="0"/>
+                        <GradientStop Color="Black" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.629"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="View_Contributors" Content="View Collaborators" RenderTransformOrigin="0.5,0.5" Click="View_Contributors_Click" Margin="50,0,312,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="40" Foreground="#00FF00" BorderBrush="#FF040505" FontFamily="Copperplate Gothic Light">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="DarkOliveGreen" Offset="0"/>
+                        <GradientStop Color="Black" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="twitterbtn" Click="twitterbtnClick" Margin="80,0,362,10" Height="60">
+                <Button.Background>
+                    <ImageBrush ImageSource="img/twitter.png" Stretch="Fill"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="facebookbtn" Click="facebookbtnClick" Margin="80,0,362,10" Height="60">
+                <Button.Background>
+                    <ImageBrush ImageSource="img/facebook.png" Stretch="Fill"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+    </Border>
+</Window>
